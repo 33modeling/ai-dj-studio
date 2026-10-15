@@ -48,3 +48,8 @@
   .track-buttons button, .set-buttons button, .deck-actions button, .top nav button { min-height: 44px; }
   .track-buttons a, .license a, footer a { display: inline-flex; align-items: center; min-height: 44px; }
 }
+
+/* 휴대폰·터치: 세트 목록 순서 바꾸기·빼기 단추 가로 44px */
+@media (max-width: 820px), (pointer: coarse) {
+  .set-buttons button { min-width: 44px; }
+}
