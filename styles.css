@@ -5,3 +5,46 @@
 @media(prefers-reduced-motion:reduce){.deck.playing .platter{animation:none}*{scroll-behavior:auto!important}}
 
 @media(max-width:360px){.deck-main{grid-template-columns:68px minmax(0,1fr);gap:10px}.platter{width:68px;height:68px}.platter::before{width:34px;height:34px}}
+
+/* 휴대폰 폭(560px 이하): 보이는 글자 11px 미만 금지 */
+@media (max-width: 560px) {
+  .brand strong span,
+  .eyebrow,
+  .hero-art span,
+  .deck-name,
+  .bpm-chip small,
+  .deck-controls label span,
+  .deck-note,
+  .cross-control>div>span,
+  .cross-labels,
+  .master span,
+  .level,
+  .record-actions small,
+  .library-labels,
+  .track-mark,
+  .track small,
+  .track-tempo small,
+  .track-buttons button,
+  .track-buttons a,
+  .dropzone small,
+  .set-header span,
+  .setlist small,
+  .set-buttons button,
+  .hero-meta,
+  .times,
+  .deck-controls label,
+  .deck-actions button,
+  .export-controls label,
+  footer { font-size: 11px; }
+  .deck-actions button { white-space: nowrap; }
+}
+/* 휴대폰·터치: 입력칸 글자 16px(아이폰 확대 방지), 누름 대상 44px */
+@media (max-width: 820px), (pointer: coarse) {
+  body :is(input:is([type=text], [type=search], [type=number], [type=email], [type=url], [type=tel], [type=password], :not([type])), select, textarea) { font-size: 16px; }
+  body input[type=range] { min-height: 44px; }
+  select, .track-tempo input { min-height: 44px; }
+  .search { padding-top: 0; padding-bottom: 0; }
+  .search input { min-height: 44px; }
+  .track-buttons button, .set-buttons button, .deck-actions button, .top nav button { min-height: 44px; }
+  .track-buttons a, .license a, footer a { display: inline-flex; align-items: center; min-height: 44px; }
+}
